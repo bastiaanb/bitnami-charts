@@ -1310,6 +1310,11 @@ backup:
       ## If defined, PVC must be created manually before volume will be bound
       ##
       existingClaim: ""
+      ## @param backup.cronjob.storage.existingVolume Provide an volume definition  (only when `architecture=standalone`)
+      ## For example, to use an existing NFS volume.
+      ## The definition must not include the name of the volume
+      ##
+      existingVolume: ""
       ## @param backup.cronjob.storage.resourcePolicy Setting it to "keep" to avoid removing PVCs during a helm delete operation. Leaving it empty will delete PVCs after the chart deleted
       ##
       resourcePolicy: ""
